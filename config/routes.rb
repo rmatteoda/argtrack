@@ -1,4 +1,12 @@
 Argtrack::Application.routes.draw do
+  get "track_pages/home"
+
+  get "track_pages/products"
+
+  get "track_pages/about"
+
+  get "track_pages/contact"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
