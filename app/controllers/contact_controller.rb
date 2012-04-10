@@ -12,7 +12,7 @@ class ContactController < ApplicationController
       flash[:success] = "Gracias por contactarse con nosotros, le responderemos a la brevedad"
       redirect_to(root_path)
     else
-      flash.now[:error] = 'Por favor completar todos los campos'
+      flash.now[:error] = 'Por favor completar todos los campos correctamente'
       render :new
     end
   end

@@ -3,7 +3,7 @@ Argtrack::Application.routes.draw do
   root to: 'track_pages#home'
 
 
-  #match '/',    to: 'track_pages#home'
+  match '/',    to: 'track_pages#home'
   match '/inicio',    to: 'track_pages#home'
   match '/servicios',   to: 'track_pages#about'
   match '/products',   to: 'track_pages#products'
