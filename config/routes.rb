@@ -1,11 +1,25 @@
 Argtrack::Application.routes.draw do
-  get "track_pages/home"
+  
+  root to: 'track_pages#home'
 
-  get "track_pages/products"
 
-  get "track_pages/about"
+  #match '/',    to: 'track_pages#home'
+  match '/inicio',    to: 'track_pages#home'
+  match '/servicios',   to: 'track_pages#about'
+  match '/products',   to: 'track_pages#products'
 
-  get "track_pages/contact"
+  match '/contact' => 'contact#new', :as => 'contact', :via => :get
+  match '/contact' => 'contact#create', :as => 'contact', :via => :post
+  #match '/contact', to: 'track_pages#contact'
+
+
+  #get "track_pages/home"
+
+  #get "track_pages/products"
+
+  #get "track_pages/about"
+
+  #get "track_pages/contact"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
