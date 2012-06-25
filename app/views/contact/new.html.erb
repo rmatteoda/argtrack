@@ -1,9 +1,13 @@
 <% provide(:title, 'Contacto') %>
-<div class="center hero-unit">
-<h6>Pongase en contacto con nosotros completando el siguiente formulario</h6>  
 
+<div class="center hero-unit">
+
+<h6>Pongase en contacto con nosotros completando el siguiente formulario o por mail a </h6>  
+<address>
+  <a href="mailto:#">contacto@tracktambo.com</a> </address>
+   
 <div class="row">
-  <div class="span3 offset3">
+  <div class="span5 offset3">
         
 <%= form_for @message, :url => contact_path do |form| %>
   <fieldset class="fields">
@@ -41,3 +45,5 @@
 </div>
 </div>
 </div>
+
+
