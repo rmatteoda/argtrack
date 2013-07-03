@@ -4,6 +4,6 @@ class NotificationsMailer < ActionMailer::Base
 
   def new_message(message)
     @message = message
-    mail(:subject => "[TrackTambo-contacto] #{message.subject}")
+    mail(:subject => "[TrackTambo-contacto] desde pagina web")
   end
 end

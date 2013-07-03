@@ -2,13 +2,15 @@
 
 <div class="center hero-unit">
 
+<div class="row">
+  <div class="span6 offset5">
+  <br>      
+  <br>      
+  <br>      
 <h6>Pongase en contacto con nosotros completando el siguiente formulario o por mail a </h6>  
 <address>
   <a href="mailto:#">contacto@tracktambo.com</a> </address>
    
-<div class="row">
-  <div class="span5 offset3">
-        
 <%= form_for @message, :url => contact_path do |form| %>
   <fieldset class="fields">
     <div class="field">
@@ -25,12 +27,7 @@
       <%= form.label :telefono %>
       <%= form.text_field :telefono %>
     </div>
-    
-    <div class="field">
-      <%= form.label :asunto %>
-      <%= form.text_field :subject %>
-    </div>
-    
+        
     <div class="field">
       <%= form.label :mensaje %>
       <%= form.text_area :body,  :rows => 10 %>

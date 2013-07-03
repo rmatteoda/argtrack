@@ -5,18 +5,28 @@
     <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
+     <!-- Le styles -->
     <%= csrf_meta_tags %>
     <%= render 'layouts/shim' %>    
   </head>
   <body>
     <%= render 'layouts/header' %>
-    <div class="container">
+    <%= yield %>
+   <div class="container marketing">
       <% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>"><%= value %></div>
+        <div id="flash" class="alert alert-<%= key %>"><%= value %></div>
       <% end %>
-      
-      <%= yield %>
+            
+      <%= render 'layouts/products' %>
+      <%= render 'layouts/features' %>
       <%= render 'layouts/footer' %>
     </div>
   </body>
+  <script type="text/javascript">
+$(document).ready(function(){
+  setTimeout(function(){
+    $('#flash').remove();
+  }, 8000);
+ })
+</script>
 </html>
