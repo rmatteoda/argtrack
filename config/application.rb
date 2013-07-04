@@ -59,9 +59,9 @@ module Argtrack
     config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
-    :domain               => "gmail.com",
-    :user_name            => "rmatteoda@gmail.com",
-    :password             => "chiva26682",
+    :domain               => "tracktambo.com",
+    :user_name            => "contacto@tracktambo.com",
+    :password             => "chiva886",
     :authentication       => :plain,
     :enable_starttls_auto => true
     }
